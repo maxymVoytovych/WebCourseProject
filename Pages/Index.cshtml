@@ -1,0 +1,15 @@
+﻿@page
+@using ShopWebApp.Components
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">My favourite manga collection</h1>
+</div>
+
+
+
+@(await Html.RenderComponentAsync<MangaList>(RenderMode.ServerPrerendered))
+<script src="_framework/blazor.server.js"></script>
